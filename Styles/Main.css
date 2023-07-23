@@ -1,141 +1,51 @@
+@media only screen and (max-width: 1100px) {}
+
 .NavBar {
+    z-index: 10000;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     width: 70px;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    text-align: center;
-    z-index: 10000;
 }
 
-.Container {
-    position: absolute;
-    top: 10px;
-}
-
-.MHolder {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-self: center;
-    align-items: center;
-    text-align: center;
-}
-
-@media only screen and (max-width: 1100px) {
-    /* For mobile phones: */
-    [class*="NavBar"] {
-        position: fixed;
-        bottom: none;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 70px;
-        width: 100%;
-    }
-    [class*="LogoContainer"] {
-        position: absolute;
-        top: 7px;
-        left: 7px;
-        display: flex;
-        border: dashed white;
-        color: white;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        justify-content: center;
-        align-self: center;
-        align-items: center;
-        text-align: center;
-        transition: all 0.5s;
-    }
-    [class*="Container"] {
-        position: absolute;
-        right: 10px;
-    }
-    [class*="MHolder"] {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row-reverse;
-        position: relative;
-        align-self: center;
-        align-items: center;
-        text-align: center;
-    }
-    [class*="ItemHolder"] {
-        display: none;
-        z-index: -1;
-        position: absolute;
-        background-color: white;
-        color: black;
-        right: -5px;
-        width: 300px;
-        height: 100%;
-        justify-content: flex-end;
-        align-items: center;
-        text-align: center;
-        padding: 2px;
-        border-radius: 10px;
-        box-shadow: 0px 7px 77px -6px rgba(40, 40, 40, 0.9);
-        -webkit-box-shadow: 0px 7px 77px -6px rgba(40, 40, 40, 0.9);
-        -moz-box-shadow: 0px 7px 77px -6px rgba(40, 40, 40, 0.9);
-    }
-    [class*="itemPlace"] {
-        z-index: -1;
-        position: absolute;
-        background-color: white;
-        color: black;
-        right: 60px;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        text-align: center;
-        padding: 2px;
-        border-radius: 10px;
-        box-shadow: 0px 7px 77px -6px rgba(40, 40, 40, 0.9);
-        -webkit-box-shadow: 0px 7px 77px -6px rgba(40, 40, 40, 0.9);
-        -moz-box-shadow: 0px 7px 77px -6px rgba(40, 40, 40, 0.9);
-    }
-}
-
-.LogoContainer {
+.NavLOGO {
     position: absolute;
     bottom: 10px;
-    display: flex;
-    border: dashed white;
-    color: white;
+    left: 10px;
+    background-color: white;
+    color: black;
     border-radius: 50%;
-    width: 50px;
     height: 50px;
+    width: 50px;
+    box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.NavLOGO:active {
+    left: 5px;
+    bottom: 5px;
+    box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.ContentHolder {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    right: 0px;
+    height: 75%;
+    display: flex;
     justify-content: center;
-    align-self: center;
-    align-items: center;
-    text-align: center;
-    transition: all 0.1s;
+    align-items: self-start;
 }
 
-.LogoContainer:hover {
-    transform: scale(95%);
-    box-shadow: 0px 7px 77px -6px rgba(250, 91, 0, 0.4);
-    -webkit-box-shadow: 0px 7px 77px -6px rgba(250, 91, 0, 0.4);
-    -moz-box-shadow: 0px 7px 77px -6px rgba(250, 91, 0, 0.4);
-}
-
-.LogoContainer:active {
-    transform: scale(95%);
-    box-shadow: 0px 7px 77px -6px rgba(250, 91, 0, 0.4);
-    -webkit-box-shadow: 0px 7px 77px -6px rgba(250, 91, 0, 0.4);
-    -moz-box-shadow: 0px 7px 77px -6px rgba(250, 91, 0, 0.4);
+.Menu_BTN_ICON {
+    content: "";
 }
 
 .ResShow {
