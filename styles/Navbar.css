@@ -1,8 +1,6 @@
 :root {
     font-family: "Open Sans";
     font-size: 16px;
-    background-color: white;
-    color: rgba(40, 40, 40, 1);
 }
 
 .NavBar {
@@ -23,7 +21,6 @@
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    color: rgba(40, 40, 40, 1);
 }
 
 .navItem {
@@ -36,8 +33,20 @@
     align-content: center;
     align-items: center;
     text-decoration: none;
-    background-color: white;
-    color: rgba(40, 40, 40, 1);
+}
+
+.ground_NavItems {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: all 100ms linear;
+    transform: translateX(-100%);
+    transform: scale(0%);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .navItem:first-child {
@@ -84,5 +93,22 @@
         margin: 0;
         margin-right: 10px;
         margin-left: auto;
+    }
+    .ground_NavItems {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        transition: all 100ms linear;
+        transform: translateY(-100%);
+        transform: scale(0%);
+        color: none;
+        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    .ground_NavItems .navItem {
+        margin: 10px;
     }
 }

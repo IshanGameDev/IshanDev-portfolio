@@ -1,0 +1,72 @@
+.PlayerPannel {
+    margin: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.PlayerDiv {
+    width: 80%;
+    height: 80%;
+}
+
+.VideoPlayer {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.InputDiv {
+    margin: 2rem;
+    width: 60%;
+    height: 8rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.Input_VideoURL {
+    width: 90%;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sub_VideoURL {
+    font-family: "Open Sans";
+    font-weight: bold;
+    margin: 10px;
+    width: 90%;
+    height: 2rem;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .PlayerPannel {
+        margin: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .PlayerDiv {
+        width: 100%;
+        height: 100%;
+    }
+    .VideoPlayer {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}

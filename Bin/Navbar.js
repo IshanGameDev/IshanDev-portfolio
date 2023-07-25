@@ -65,3 +65,17 @@ for (let index = 0; index < items.length; index++) {
     const element = items[index];
     element.innerHTML = window.screen.width + "*" + window.screen.height;
 }
+
+function NavMenu() {
+    var MenuBTN = document.getElementById("MenuBTN");
+    var NavItemHolder = document.getElementById("NavItemHolder");
+    if (MenuBTN.innerHTML == "menu") {
+        NavItemHolder.style.transform = "scale(100%)";
+        NavItemHolder.style.transform = "translateX(100%);";
+        MenuBTN.innerHTML = "close";
+    } else {
+        MenuBTN.innerHTML = "menu"
+        NavItemHolder.style.transform = "scale(0%)";
+        NavItemHolder.style.transform = "translateX(-100%);";
+    }
+}

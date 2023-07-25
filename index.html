@@ -12,33 +12,110 @@
     <link rel="stylesheet" href="styles/Properties.css">
     <link rel="stylesheet" href="styles/Navbar.css">
     <link rel="stylesheet" href="styles/Home.css">
+    <link rel="stylesheet" href="styles/Player.css">
 </head>
 
 <body class="DarkMode">
     <div class="NavBar DarkMode">
         <div class="navBar_nav DarkMode">
-            <a onclick="Home()" class="navItem button_ DarkMode Active_">
-                <span class="material-symbols-rounded DarkMode">home</span>
+            <a onclick="NavMenu()" class="navItem button_ DarkMode Active_">
+                <span id="MenuBTN" class="material-symbols-rounded DarkMode">menu</span>
             </a>
-            <a onclick="Player()" class="navItem button_ DarkMode">
-                <span class="material-symbols-rounded DarkMode">Play_arrow</span>
-            </a>
+            <div id="NavItemHolder" class="ground_NavItems">
+                <a onclick="Home()" class="navItem button_ DarkMode Active_">
+                    <span class="material-symbols-rounded DarkMode">home</span>
+                </a>
+                <a onclick="Player()" class="navItem button_ DarkMode">
+                    <span class="material-symbols-rounded DarkMode">Play_arrow</span>
+                </a>
+            </div>
+
             <a onclick="DarkMode_()" id="_darkMode" class="Active_ navItem button_ DarkMode">
                 <span id="_DarkModeICON" class="material-symbols-rounded DarkMode">dark_mode</span>
             </a>
         </div>
     </div>
     <div id="HomePannel" class="DarkMode HomePannel">
-        <span class="material-symbols-rounded" style="font-size: 100px;">Home</span>
-        <h1 class="Info"></h1>
-        <p>Home Pannel</p>
+        <span class="DarkMode material-symbols-rounded" style="font-size: 100px;">Home</span>
+        <h1 class="DarkMode Info"></h1>
+        <p class="DarkMode">Home Pannel</p>
     </div>
     <div id="PlayerPannel" class="DarkMode PlayerPannel">
-        <span class="material-symbols-rounded" style="font-size: 100px;">Play_arrow</span>
-        <h1 class="Info"></h1>
-        <p>Player Pannel</p>
+
+        <div class="DarkMode __BackColor_Black PlayerDiv">
+            <link rel="stylesheet" href="/VideoPlayerLib/videoPlayer.css">
+            <link rel="stylesheet" href="/VideoPlayerLib/controls.css">
+            <link rel="stylesheet" href="/VideoPlayerLib/time.css">
+            <link rel="stylesheet" href="/VideoPlayerLib/Buttons.css">
+            <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+            <div class="DarkMode __BackColor_Black Main">
+                <video onclick="UnhideCon()" id="videoPlayer" autoplay class="__BackColor_Black videoPlayer">
+        
+                </video>
+                <div id="Controls" class=" Controls">
+                    <div class="FullScreen">
+                        <div class="CloseHolder">
+                            <button onclick="HideCon()" class="close material-symbols-rounded">close</button>
+                        </div>
+                        <div class="Mid">
+                            <div class="rewind">
+                                <button onclick="_skip10()" class="material-symbols-rounded rewind_">replay_10</button>
+                            </div>
+                            <div class="PlayMid">
+                                <button onclick="togglePlayPause()" id="playmid" class="material-symbols-rounded playmid">pause</button>
+                            </div>
+                            <div class="forward">
+                                <button onclick="skip10_()" class="material-symbols-rounded forward_">forward_10</button>
+                            </div>
+                        </div>
+                        <div class="QS_DIV">
+                            <div style="display: none;" id="S_holder" class="QualitySetting">
+                                <button onclick="re_1080_p()" class="res1080p">1080p <i class="material-symbols-rounded">high_quality</i></button>
+                                <button onclick="re_720_p()" class="res720p">720p<i class="material-symbols-rounded">hd</i></button>
+                                <button onclick="re_480_p()" class="res480p">480p</button>
+                                <button onclick="re_360_p()" class="res360p">360p</button>
+                            </div>
+                        </div>
+                        <div class="Low">
+                            <div class="Play">
+                                <button onclick="togglePlayPause()" id="play" class="material-symbols-rounded play">pause</button>
+                            </div>
+                            <div class="Volume">
+                                <button id="volIcon" onclick="muteUnmute()" class="material-symbols-rounded volume">volume_up</button>
+                                <div id="Volume-RangeHolder" class="Volume-RangeHolder">
+                                    <input class="VolumeRange" type="range" id="VolumeRange" min="0" max="100" value="100" step="1">
+                                </div>
+                            </div>
+                            <div id="" class="Timeline">
+                                <input type="range" id="timeline" min="0" max="100" value="0" step="0.1">
+                            </div>
+                            <div id="CurrentTime" class="CurrentTime">
+                                <p1 class="__ColorWhite_">00:00</p1>
+                            </div>
+                            <div id="TotalTime" class="TotalTime">
+                                <p1 class="__ColorWhite_">24:59</p1>
+                            </div>
+                            <div class="Setting">
+                                <button onclick="toggleSetting()" class="material-symbols-rounded setting">settings</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="InputDiv">
+            <input id="Input_VideoURL" class="Input_VideoURL" onclick="URLCLICKED()" type="text">
+            <button onclick="SubmitBTN()" id="sub_VideoURL" class="material-symbols-rounded sub_VideoURL button_"><span class="material-symbols-rounded">play_arrow</span></button>
+        </div>
+        <span class="DarkMode material-symbols-rounded" style="font-size: 100px;">Play_arrow</span>
+        <h1 class="DarkMode Info"></h1>
+        <p class="DarkMode">Player Pannel</p>
     </div>
 </body>
+<script src="/VideoPlayerLib/videoPlayer.js"></script>
 <script src="Bin/Navbar.js"></script>
 
 </html>

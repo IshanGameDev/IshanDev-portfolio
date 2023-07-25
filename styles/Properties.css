@@ -1,6 +1,15 @@
 .DarkMode {
-    background-color: white;
-    color: rgba(40, 40, 40, 1);
+    background-color: rgb(255, 255, 255);
+    color: rgba(35, 35, 35, 1);
+}
+
+.__ColorWhite_ {
+    color: white;
+}
+
+.__BackColor_Black {
+    background-color: rgba(35, 35, 35, 1);
+    border-radius: 10px;
 }
 
 .Active_ {
@@ -11,6 +20,7 @@
     box-shadow: -5px 5px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.2);
     transition: all 100ms;
+    user-select: none;
 }
 
 .button_:hover {
