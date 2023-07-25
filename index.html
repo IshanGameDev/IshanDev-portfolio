@@ -5,20 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="Styles/ItemProperties.css">
-    <link rel="stylesheet" href="Styles/Main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,700,1,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,1,200" />
+    <link rel="stylesheet" href="styles/Properties.css">
+    <link rel="stylesheet" href="styles/Navbar.css">
+    <link rel="stylesheet" href="styles/Home.css">
 </head>
 
-<body>
-    <div class="DarkMode NavBar">
-        <button onclick="DarkModeSwitch()" id="DarkLogo" href="#" style="font-size: 40px;" class="DarkMode NavLOGO Button_rounded material-symbols-sharp"></button>
+<body class="DarkMode">
+    <div class="NavBar DarkMode">
+        <div class="navBar_nav DarkMode">
+            <a onclick="Home()" class="navItem button_ DarkMode Active_">
+                <span class="material-symbols-rounded DarkMode">home</span>
+            </a>
+            <a onclick="Player()" class="navItem button_ DarkMode">
+                <span class="material-symbols-rounded DarkMode">Play_arrow</span>
+            </a>
+            <a onclick="DarkMode_()" id="_darkMode" class="Active_ navItem button_ DarkMode">
+                <span id="_DarkModeICON" class="material-symbols-rounded DarkMode">dark_mode</span>
+            </a>
+        </div>
     </div>
-    <div class="DarkMode ResShow">
-        <h1 id="res" class="DarkMode">1920*1080</h1>
-    </div>
+    <div id="HomePannel" class="DarkMode HomePannel">Home</div>
+    <div id="PlayerPannel" class="DarkMode PlayerPannel">Player</div>
 </body>
-<script src="Bin/ButtonsAndAnimation.js"></script>
+<script src="Bin/Navbar.js"></script>
 
 </html>

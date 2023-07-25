@@ -1,0 +1,24 @@
+.DarkMode {
+    background-color: rgba(255, 255, 255);
+    color: black;
+}
+
+.Active_ {
+    border: 2px solid rgba(27, 108, 190, 0.556);
+}
+
+.button_ {
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 100ms;
+}
+
+.button_:hover {
+    border: 1px solid rgba(0, 0, 0, 0.0);
+}
+
+.button_:active {
+    transform: translate(-5px, 5px);
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+}
