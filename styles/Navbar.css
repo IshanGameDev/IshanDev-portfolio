@@ -1,6 +1,8 @@
 :root {
     font-family: "Open Sans";
     font-size: 16px;
+    background-color: white;
+    color: rgba(40, 40, 40, 1);
 }
 
 .NavBar {
@@ -10,7 +12,7 @@
     top: 0;
     bottom: 0;
     width: 5rem;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navBar_nav {
@@ -21,6 +23,7 @@
     justify-content: flex-start;
     align-content: center;
     align-items: center;
+    color: rgba(40, 40, 40, 1);
 }
 
 .navItem {
@@ -33,6 +36,8 @@
     align-content: center;
     align-items: center;
     text-decoration: none;
+    background-color: white;
+    color: rgba(40, 40, 40, 1);
 }
 
 .navItem:first-child {
@@ -53,7 +58,7 @@
         right: 0;
         height: 5rem;
         width: 100%;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     }
     .navBar_nav {
         display: flex;

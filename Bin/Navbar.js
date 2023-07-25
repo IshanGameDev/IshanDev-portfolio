@@ -40,11 +40,11 @@ function DarkMode_() {
 function Home() {
     var HomePannel = document.getElementById("HomePannel");
     var PlayerPannel = document.getElementById("PlayerPannel");
-    if (HomePannel.style.display == "block") {
+    if (HomePannel.style.display == "flex") {
         HomePannel.style.display = "none";
-        PlayerPannel.style.display = "block";
+        PlayerPannel.style.display = "flex";
     } else {
-        HomePannel.style.display = "block"
+        HomePannel.style.display = "flex"
         PlayerPannel.style.display = "none";
     }
 }
@@ -52,11 +52,16 @@ function Home() {
 function Player() {
     var HomePannel = document.getElementById("HomePannel");
     var PlayerPannel = document.getElementById("PlayerPannel");
-    if (PlayerPannel.style.display == "block") {
+    if (PlayerPannel.style.display == "flex") {
         PlayerPannel.style.display = "none";
-        HomePannel.style.display = "block"
+        HomePannel.style.display = "flex"
     } else {
-        PlayerPannel.style.display = "block"
+        PlayerPannel.style.display = "flex"
         HomePannel.style.display = "none"
     }
+}
+var items = document.getElementsByClassName("Info");
+for (let index = 0; index < items.length; index++) {
+    const element = items[index];
+    element.innerHTML = window.screen.width + "*" + window.screen.height;
 }
